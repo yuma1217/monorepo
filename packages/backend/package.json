@@ -1,5 +1,6 @@
 {
-  "name": "backend",
+  "name": "@monorepo/backend",
+  "types": "./src/index.ts",
   "private": true,
   "version": "0.0.1",
   "scripts": {
