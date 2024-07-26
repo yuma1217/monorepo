@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function Page() {
-  return <>test</>;
+  return <Button>Click</Button>;
 }
