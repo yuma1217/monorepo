@@ -4,6 +4,8 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { validator } from "hono/validator";
 import { z } from "zod";
+import { db } from "./db";
+import { usersTable } from "./db/schema";
 const schema = z.object({
   name: z.string(),
   age: z.number(),
@@ -16,12 +18,23 @@ const route = app
     console.log("request");
     return c.text("Hello Hono!");
   })
-  .post("/user", zValidator("json", schema), (c) => {
-    const validated = c.req.valid("json");
-    console.log(validated);
-    return c.json({
-      message: `Hello ${validated.name}! You are ${validated.age} years old.`,
+  .get("/create", async (c) => {
+    const res = await db.insert(usersTable).values({
+      name: "test2",
+      age: 10,
+      email: "test2@ahoo.co.jp",
     });
+    console.log("res", res);
+    return c.text("User created");
+  })
+  .post("/user", zValidator("json", schema), async (c) => {
+    console.log("request", c.body);
+    db.insert(usersTable).values({
+      name: "test",
+      age: 10,
+      email: "test@ahoo.co.jp",
+    });
+    return c.json(c.body);
   });
 
 const port = 3200;
