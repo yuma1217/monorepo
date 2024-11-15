@@ -2550,6 +2550,19 @@
     stream-slice "^0.1.2"
     undici "^6.11.1"
 
+"@remix-run/node@^2.14.0":
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/node/-/node-2.14.0.tgz#af7b828af3dce6d157452a9bbf29bf1af1033e43"
+  integrity sha512-ou16LMJYv0ElIToZ6dDqaLjv1T3iBEwuJTBahveEA8NkkACIWODJ2fgUYf1UKLMKHVdHjNImLzS37HdSZY0Q6g==
+  dependencies:
+    "@remix-run/server-runtime" "2.14.0"
+    "@remix-run/web-fetch" "^4.4.2"
+    "@web3-storage/multipart-parser" "^1.0.0"
+    cookie-signature "^1.1.0"
+    source-map-support "^0.5.21"
+    stream-slice "^0.1.2"
+    undici "^6.11.1"
+
 "@remix-run/node@^2.7.2":
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/@remix-run/node/-/node-2.10.2.tgz#218375bdc86eaa4ecd205f96774e12460609320d"
@@ -2573,6 +2586,11 @@
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.20.0.tgz#03554155b45d8b529adf635b2f6ad1165d70d8b4"
   integrity sha512-mUnk8rPJBI9loFDZ+YzPGdeniYK+FTmRD1TMCz7ev2SNIozyKKpnGgsxO34u6Z4z/t0ITuu7voi/AshfsGsgFg==
 
+"@remix-run/router@1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.21.0.tgz#c65ae4262bdcfe415dbd4f64ec87676e4a56e2b5"
+  integrity sha512-xfSkCAchbdG5PnbrKqFWwia4Bi61nH+wm8wLEqfHDyp7Y3dZzgqS2itV8i4gAq9pC2HsTpwyBC6Ds8VHZ96JlA==
+
 "@remix-run/server-runtime@2.10.2":
   version "2.10.2"
   resolved "https://registry.yarnpkg.com/@remix-run/server-runtime/-/server-runtime-2.10.2.tgz#ba6da3c211f4a68ef54c2abd17d3109a9308d50c"
@@ -2592,6 +2610,19 @@
   integrity sha512-2DfBPRcHKVzE4bCNsNkKB50BhCCKF73x+jiS836OyxSIAL+x0tguV2AEjmGXefEXc5AGGzoxkus0AUUEYa29Vg==
   dependencies:
     "@remix-run/router" "1.20.0"
+    "@types/cookie" "^0.6.0"
+    "@web3-storage/multipart-parser" "^1.0.0"
+    cookie "^0.6.0"
+    set-cookie-parser "^2.4.8"
+    source-map "^0.7.3"
+    turbo-stream "2.4.0"
+
+"@remix-run/server-runtime@2.14.0":
+  version "2.14.0"
+  resolved "https://registry.yarnpkg.com/@remix-run/server-runtime/-/server-runtime-2.14.0.tgz#40e72c06362cc3aed1ae8c327277140f43aa1015"
+  integrity sha512-9Th9UzDaoFFBD7zA5mRI1KT8JktFLN4ij9jPygrKBhG/kYmNIvhcMtq9VyjcbMvFK5natTyhOhrrKRIHtijD4w==
+  dependencies:
+    "@remix-run/router" "1.21.0"
     "@types/cookie" "^0.6.0"
     "@web3-storage/multipart-parser" "^1.0.0"
     cookie "^0.6.0"
@@ -2723,6 +2754,13 @@
   dependencies:
     "@tanstack/store" "^0.5.5"
 
+"@tanstack/form-core@0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/form-core/-/form-core-0.35.0.tgz#62b33edae9d22059738f2729e52f83eefcd991e2"
+  integrity sha512-WNgZ/Fo8OdsqvbHe/M4a9xjL4TU2Q//I2660YA88jeDyavHQXmOuos3vEuqvIW1+CYfONOAcz9AOI2bPBVId9w==
+  dependencies:
+    "@tanstack/store" "^0.5.5"
+
 "@tanstack/react-form@^0.34.1":
   version "0.34.1"
   resolved "https://registry.yarnpkg.com/@tanstack/react-form/-/react-form-0.34.1.tgz#cf0330041285a2646515035f1eda61a9e9affdb1"
@@ -2730,6 +2768,16 @@
   dependencies:
     "@remix-run/node" "^2.13.1"
     "@tanstack/form-core" "0.34.1"
+    "@tanstack/react-store" "^0.5.6"
+    decode-formdata "^0.8.0"
+
+"@tanstack/react-form@^0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-form/-/react-form-0.35.0.tgz#3fb610c6065d5dfe877867e7e7f19d601153e25b"
+  integrity sha512-9TkARKyzctQjg5yivxJiSb1Q3NoqGRKC7XZG0+UevWOjbIn+PR18eX8Nglx1CSxlj+BnzO+bWgVDO2evCugdtQ==
+  dependencies:
+    "@remix-run/node" "^2.14.0"
+    "@tanstack/form-core" "0.35.0"
     "@tanstack/react-store" "^0.5.6"
     decode-formdata "^0.8.0"
 
@@ -2745,6 +2793,13 @@
   version "0.5.5"
   resolved "https://registry.yarnpkg.com/@tanstack/store/-/store-0.5.5.tgz#84d78568c4a71c885cb15754bf51eca42a776efe"
   integrity sha512-EOSrgdDAJExbvRZEQ/Xhh9iZchXpMN+ga1Bnk8Nmygzs8TfiE6hbzThF+Pr2G19uHL6+DTDTHhJ8VQiOd7l4tA==
+
+"@tanstack/zod-form-adapter@^0.35.0":
+  version "0.35.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/zod-form-adapter/-/zod-form-adapter-0.35.0.tgz#370399e37e8474828b9de544700fb8c60dfaff15"
+  integrity sha512-RGpw7R6hmvRPiupktUIhyw8dApk34TbgWLlEam/NhtaKORivlcwI58VYAB7EUe1I/ZQS0h++zM30tdYCG5M74w==
+  dependencies:
+    "@tanstack/form-core" "0.35.0"
 
 "@tootallnate/once@2":
   version "2.0.0"
@@ -8634,6 +8689,11 @@ react-refresh@^0.14.0, react-refresh@^0.14.2:
   version "0.14.2"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.14.2.tgz#3833da01ce32da470f1f936b9d477da5c7028bf9"
   integrity sha512-jCvmsr+1IUSMUyzOkRcvnVbX3ZYC6g9TDrDbFuFmRDq7PD4yaGbLKNQL6k2jnArV8hjYxh7hVhAZB6s9HDGpZA==
+
+react-scan@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/react-scan/-/react-scan-0.0.4.tgz#a735007b20bbcd0ea6fccca67b017b08fb517327"
+  integrity sha512-fy1i6WLrNRhYNl6qgSL4M2uoG2gIlqE2V56pgTbFaFsvlj2zZZ1UQVpXf5ch9YoL4R8lKCaIjEGKbOAuCLrxUg==
 
 react-shallow-renderer@^16.15.0:
   version "16.15.0"
