@@ -7,15 +7,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
-import Link from "next/link";
 import { useForm } from "@tanstack/react-form";
 import { zodValidator } from "@tanstack/zod-form-adapter";
 import { z } from "zod";
-import { validators } from "tailwind-merge";
 
 const distanceSchema = z.number().min(0).max(100, "100kmまでです");
 const schema = z.object({
@@ -86,10 +83,20 @@ export default function SearchForm() {
               </div>
             )}
           </form.Field>
-
-          <Button type="submit" className="w-full">
-            検索する
-          </Button>
+          <form.Subscribe
+            selector={(state) => [state.canSubmit, state.isSubmitted]}
+          >
+            {([canSubmit, isSubmitting]) => (
+              <Button
+                type="submit"
+                className="w-full"
+                onClick={() => {}}
+                disabled={!canSubmit}
+              >
+                検索する
+              </Button>
+            )}
+          </form.Subscribe>
         </div>
       </CardContent>
     </Card>
